@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import {Observable} from "rxjs";
-import {Store} from "@ngrx/store";
-import {AsyncPipe} from "@angular/common";
-import {ProfileCardComponent} from "../../componenets/profile-card/profile-card.component";
-import {ProfileState} from "../../profile/profile.state";
-import * as ProfileActions from "../../profile/profile.action";
+import { Observable } from 'rxjs';
+import { Store } from '@ngrx/store';
+import { AsyncPipe } from '@angular/common';
+import { ProfileCardComponent } from '../../componenets/profile-card/profile-card.component';
+import { ProfileState } from '../../profile/profile.state';
+import * as ProfileActions from '../../profile/profile.action';
 
 @Component({
   selector: 'app-list-profiles',
@@ -14,7 +14,7 @@ import * as ProfileActions from "../../profile/profile.action";
     ProfileCardComponent
   ],
   templateUrl: './list-profiles.component.html',
-  styleUrl: './list-profiles.component.scss'
+  styleUrls: ['./list-profiles.component.scss']
 })
 export class ListProfilesComponent {
   profile$!:Observable<ProfileState>

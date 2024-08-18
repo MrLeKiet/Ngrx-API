@@ -8,15 +8,13 @@ import {Profile} from "../models/profile.model";
 export class ProfileService {
 
   url = "http://localhost:3000/profile";
-
-  constructor(private http: HttpClient) {
-  }
+  constructor(private http: HttpClient) {}
 
   getAllProfiles() {
     return this.http.get<Profile[]>(`${this.url}/all`);
   }
 
-  deleteProfile(id: string) {
+  deleteProfile(id: string){
     return this.http.delete(`${this.url}/${id}`);
   }
 }
